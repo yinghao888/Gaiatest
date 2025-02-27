@@ -178,20 +178,20 @@ SYSTEM_TYPE=$?  # Capture the return value of check_system_type
 
 if [[ $SYSTEM_TYPE -eq 0 ]]; then
     # VPS
-    CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json"
+    CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json"
 elif [[ $SYSTEM_TYPE -eq 1 ]]; then
     # Laptop
     if ! check_nvidia_gpu; then
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json"
     else
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config1.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config1.json"
     fi
 elif [[ $SYSTEM_TYPE -eq 2 ]]; then
     # Desktop
     if ! check_nvidia_gpu; then
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json"
     else
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config3.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config3.json"
     fi
 fi
 
@@ -209,6 +209,6 @@ echo "🔍 Fetching GaiaNet node information..."
 # Closing message
 echo "==========================================================="
 echo "🎉 Congratulations! Your GaiaNet node is successfully set up!"
-echo "🌟 Stay connected: Telegram: https://t.me/GaCryptOfficial | Twitter: https://x.com/GACryptoO"
+echo "🌟 Stay connected: Telegram: "
 echo "💪 Together, let's build the future of decentralized networks!"
 echo "===========================================================" 
