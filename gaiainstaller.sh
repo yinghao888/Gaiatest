@@ -177,7 +177,7 @@ echo "==============================================================="
         1|2|3)
             echo "Install Gaia-Node for VPS or Non-GPU Users..."
             rm -rf 1.sh
-            curl -O https://raw.githubusercontent.com/abhiag/Gaiatest/main/1.sh
+            curl -O https://raw.githubusercontent.com/yinghao888/Gaiatest/main/1.sh
             chmod +x 1.sh
             ./1.sh
             ;;
@@ -271,7 +271,7 @@ if [[ "$gaianet_info" == *"Node ID"* || "$gaianet_info" == *"Device ID"* ]]; the
 
     # Start the chatbot in a detached screen session
     sudo screen -dmS gaiabot bash -c '
-    curl -O https://raw.githubusercontent.com/abhiag/Gaiatest/main/'"$script_name"' && chmod +x '"$script_name"';
+    curl -O https://raw.githubusercontent.com/yinghao888/Gaiatest/main/'"$script_name"' && chmod +x '"$script_name"';
     if [ -f "'"$script_name"'" ]; then
         ./'"$script_name"'
         exec bash
