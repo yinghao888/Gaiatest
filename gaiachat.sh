@@ -50,8 +50,8 @@ set_api_url() {
     elif [ "$system_type" -eq 2 ]; then
         # Desktop
         if [ "$cuda_present" -eq 0 ]; then
-            API_URL="https://gadao.gaia.domains/v1/chat/completions"
-            API_NAME="Gadao"
+            API_URL="https://gaias.gaia.domains/v1/chat/completions"
+            API_NAME="gaias"
         else
             API_URL="https://hyper.gaia.domains/v1/chat/completions"
             API_NAME="Hyper"
@@ -133,7 +133,7 @@ general_questions=(
     "Who wrote 'The Republic'?"
     "Who discovered the proton?"
 )
-    elif [[ "$API_URL" == "https://gadao.gaia.domains/v1/chat/completions" ]]; then
+    elif [[ "$API_URL" == "https://gaias.gaia.domains/v1/chat/completions" ]]; then
 general_questions=(
     "What are black holes, and how do they form?"
     "Explain the causes and effects of global warming."
@@ -393,7 +393,7 @@ EOF
     elif [[ "$API_URL" == "https://soneium.gaia.domains/v1/chat/completions" ]]; then
         echo "⏳ Fetching (soneium API)..."
         sleep 2
-    elif [[ "$API_URL" == "https://gadao.gaia.domains/v1/chat/completions" ]]; then
+    elif [[ "$API_URL" == "https://gaias.gaia.domains/v1/chat/completions" ]]; then
         echo "⏳ Fetching..."
         sleep 0
     fi
