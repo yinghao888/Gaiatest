@@ -129,7 +129,7 @@ setup_cuda_env() {
 # Install GaiaNet with appropriate CUDA support
 install_gaianet() {
     if command -v nvcc &> /dev/null; then
-        CUDA_VERSION=$(nvcc --version | grep 'release' | awk '{print $6}' | cut -d',' -f1 | sed 's/V//g' | cut -d'.' -f1)
+        CUDA_VERSION=$(nvcc --version | grep ' release' | awk '{print $6}' | cut -d',' -f1 | sed 's/V//g' | cut -d'.' -f1)
         echo "✅ CUDA version detected: $CUDA_VERSION"
         if [[ "$CUDA_VERSION" == "11" || "$CUDA_VERSION" == "12" ]]; then
             echo "🔧 Installing GaiaNet with ggmlcuda $CUDA_VERSION..."
@@ -174,20 +174,20 @@ SYSTEM_TYPE=$?  # Capture the return value of check_system_type
 
 if [[ $SYSTEM_TYPE -eq 0 ]]; then
     # VPS
-    CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json"
+    CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json"
 elif [[ $SYSTEM_TYPE -eq 1 ]]; then
     # Laptop
     if ! check_nvidia_gpu; then
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json"
     else
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config1.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config1.json"
     fi
 elif [[ $SYSTEM_TYPE -eq 2 ]]; then
     # Desktop
     if ! check_nvidia_gpu; then
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config2.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config2.json"
     else
-        CONFIG_URL="https://raw.githubusercontent.com/abhiag/Gaia_Node/main/config3.json"
+        CONFIG_URL="https://raw.githubusercontent.com/yinghao888/Gaia_Node/main/config3.json"
     fi
 fi
 
@@ -207,4 +207,4 @@ echo "==========================================================="
 echo "🎉 Congratulations! Your GaiaNet node is successfully set up!"
 echo "🌟 Stay connected: Telegram: https://t.me/GaCryptOfficial | Twitter: https://x.com/GACryptoO"
 echo "💪 Together, let's build the future of decentralized networks!"
-echo "===========================================================" 
+echo "==========================================================="
