@@ -121,7 +121,7 @@ general_questions=(
     "How does statistics help in making informed decisions?"
 )
 
-    elif [[ "$API_URL" == "https://gadao.gaia.domains/v1/chat/completions" ]]; then
+    elif [[ "$API_URL" == "https://gaias.gaia.domains/v1/chat/completions" ]]; then
 general_questions=(
     "What are black holes, and how do they form?"
     "Explain the causes and effects of global warming."
@@ -213,7 +213,7 @@ general_questions=(
     "How do environmental policies impact business and industries?"
     "What is the role of women in history, and how has it evolved over time?"
     )
-    elif [[ "$API_URL" == "https://soneium.gaia.domains/v1/chat/completions" ]]; then
+    elif [[ "$API_URL" == "https://gaias.gaia.domains/v1/chat/completions" ]]; then
         general_questions=(
             "Who is the current President of the United States?"
             "What is the capital of Japan?"
@@ -378,10 +378,10 @@ EOF
     if [[ "$API_URL" == "https://gaias.gaia.domains/v1/chat/completions" ]]; then
         echo "⏳ Fetching (hyper API)..."
         sleep 1
-    elif [[ "$API_URL" == "https://soneium.gaia.domains/v1/chat/completions" ]]; then
+    elif [[ "$API_URL" == "https://gaias.gaia.domains/v1/chat/completions" ]]; then
         echo "⏳ Fetching (soneium API)..."
         sleep 2
-    elif [[ "$API_URL" == "https://gadao.gaia.domains/v1/chat/completions" ]]; then
+    elif [[ "$API_URL" == "https://gaias.gaia.domains/v1/chat/completions" ]]; then
         echo "⏳ Fetching..."
         sleep 1
     fi
