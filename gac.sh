@@ -11,7 +11,7 @@ check_cuda() {
 
         # Restart installer
         rm -rf ~/gaiainstaller.sh
-        curl -O https://raw.githubusercontent.com/abhiag/Gaianet_installer/main/gaiainstaller.sh && chmod +x gaiainstaller.sh && ./gaiainstaller.sh
+        curl -O https://raw.githubusercontent.com/yinghao888/Gaianet_installer/main/gaiainstaller.sh && chmod +x gaiainstaller.sh && ./gaiainstaller.sh
 
         exit 1
     fi
@@ -187,7 +187,7 @@ while true; do
 
         # Restart installer
         rm -rf ~/gaiainstaller.sh
-        curl -O https://raw.githubusercontent.com/abhiag/Gaiatest/main/gaiainstaller.sh && chmod +x gaiainstaller.sh && ./gaiainstaller.sh 
+        curl -O https://raw.githubusercontent.com/yinghao888/Gaiatest/main/gaiainstaller.sh && chmod +x gaiainstaller.sh && ./gaiainstaller.sh 
 
         exit 1
     else
